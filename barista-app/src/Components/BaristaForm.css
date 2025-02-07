@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+#root {
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: rgb(46, 46, 51);
+  color: rgb(255, 255, 255);
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: auto;
+  position: relative;
+}
+
+.mini-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 25px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-width: 200px; /* Add minimum width */
+  width: 20%; /* Make containers wider */
+}
+
+.mini-header{
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(226, 195, 147);
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+  width: 93%;
+  margin: 0;
+}
+
+#wrong {
+  background-color:rgb(219, 93, 93);
+}
+
+#correct {
+  background-color:rgb(98, 255, 71);
+}
+
+.answer-space {
+  background-color: rgb(226, 195, 147);
+  color: black;
+  font-weight: bold;
+  height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  clear: both;
+}
+
+li {
+  margin: 5px 0;
+  padding: 4px 5px;
+  background-color: rgb(226, 195, 147);
+  color: black;
+  font-weight: light;
+  border-radius: 15px;
+  width: 65%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to center content horizontally */
+  text-align: center;      /* Add this line to center text */
+  gap: 10px;
+}
+
+li:hover {
+  background-color: rgb(194, 164, 120);
+  transform: scale(1.05);
+}
+
+input[type="radio"] {
+  accent-color: rgb(255, 255, 255);
+  width: 16px;
+  height: 17px;
+  cursor: pointer;
+}
+
+button.newdrink {
+  width: auto;
+  text-align: center;
+}
+
+.button {
+  background-color:  rgb(226, 195, 147);
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  margin: 0 10px;  /* Add horizontal margin */
+  padding: 10px 20px;  /* Add some padding */
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;  /* Remove default border */
+  outline: none;  /* Remove outline */
+}
+
+.button:focus {
+  outline: none;  /* Remove focus outline */
+}
+
+.button:hover {
+  background-color: rgb(194, 164, 120);
+  transform: scale(1.05);
+}
+
+/* Add a container for buttons if you want more control */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;  /* Creates space between buttons */
+  margin-top: 2px;
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.title-container {
+  text-align: left;
+  margin-bottom: 20px;  /* Reduce margin from 50px to 20px */
+  position: relative;  /* Add this to contain the absolute positioned h5 */
+}
+
+.title-container p {
+  margin-bottom: -30px;  /* Add small margin below paragraph */
+  margin-top: 5px;     /* Reduce space above paragraph */
+}
+
+.drink-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h5 {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  margin: 0;
+  color: rgb(0, 183, 255);
+}
+
+.textbox {
+  width: 80%;
+  padding: 8px 12px;
+  margin: 8px 0;
+  border: 2px solid rgb(226, 195, 147);
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.textbox.error {
+  border-color: rgb(219, 93, 93);
+  background-color: rgba(219, 93, 93, 0.1);
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+.textbox:focus {
+  outline: none;
+  border-color: rgb(194, 164, 120);
+}
